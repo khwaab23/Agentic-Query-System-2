@@ -38,7 +38,9 @@ The application consists of two main components:
    pip install -r requirements.txt
    ```
 
-3. **🔑 Set OpenAI API Key** (REQUIRED)
+3. **🔑 Set OpenAI API Key** (REQUIRED - SECURITY CRITICAL)
+   
+   **⚠️ SECURITY WARNING: Never commit your actual API key to version control!**
    
    **Option A: Environment Variable**
    ```bash
@@ -49,13 +51,20 @@ The application consists of two main components:
    export OPENAI_API_KEY=your_api_key_here
    ```
    
-   **Option B: .env File** (recommended)
+   **Option B: .env File** (recommended for development)
    ```bash
    # Copy the example file
    copy .env.example .env
    
    # Edit .env and replace 'your_openai_api_key_here' with your actual API key
+   # The .env file is automatically ignored by git for security
    ```
+   
+   **🛡️ Security Best Practices:**
+   - Never commit `.env` files to version control
+   - Use environment variables in production
+   - Rotate API keys regularly
+   - Monitor API usage for suspicious activity
 
 4. **Start the Application**
    
