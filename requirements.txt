@@ -1,0 +1,21 @@
+# Agentic Query System - Requirements
+# FastAPI backend dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Data processing
+pandas==2.1.4
+jsonschema==4.20.0
+
+# OpenAI integration
+openai>=1.35.0
+
+# Streamlit frontend
+streamlit==1.29.0
+
+# HTTP requests (for Streamlit frontend)
+requests==2.31.0
+
+# Optional: For better development experience
+python-dotenv==1.0.0
